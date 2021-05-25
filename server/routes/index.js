@@ -3,19 +3,17 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express', author: 'Gonzaleez Raul', NameApp: 'WepApp', Company: 'Awsome Sofware' });
+  res.render('index', { title: 'Express', autor: 'Gonzalez Mendoza Raul',NameApp: 'WepApp', Company: 'Awsome Software'});
 });
 
-router.get('/greeting', function(req, res, next ){
-res.send('Hola Campeon')
+/* codigo nuevo. */
+router.get('/greeting', function(req, res, next) {
+res.send('hola campeon como estas?') 
 })
 
-
-router.get('/hola', function(req, res, next ){
- res.status(200).json({message: 'Gonzalez Mendoza Raul Jonoel'})
-  })
-
-
-
+/* codigo profe*/
+router.get('/hola', function(req, res, next){
+res.status(200).json({message: 'Gonzalez Mendoza Raul Jonoel'})
+})
 
 module.exports = router;

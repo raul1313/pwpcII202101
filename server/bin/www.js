@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('projnodes:server');
+var debug = require('debug')('projnotes:server');
 var http = require('http');
 
 /**

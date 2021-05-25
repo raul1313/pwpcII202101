@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Module dependencies.
- */"use strict";var app=require("../app"),debug=require("debug")("projnodes:server"),http=require("http"),port=normalizePort(process.env.PORT||"3000");app.set("port",port);/**
+ */"use strict";var app=require("../app"),debug=require("debug")("projnotes:server"),http=require("http"),port=normalizePort(process.env.PORT||"3000");app.set("port",port);/**
  * Create HTTP server.
  */var server=http.createServer(app);/**
  * Listen on provided port, on all network interfaces.
