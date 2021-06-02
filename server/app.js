@@ -7,6 +7,9 @@ import logger from 'morgan';
 import indexRouter from '@s-routes/index';
 import usersRouter from '@s-routes/users';
 
+// importaremos la configuracion
+import configTemplateEngine from '@s-config/template-engine';
+
 // Webpack Modules
 
 import webpack from 'webpack';
@@ -51,8 +54,7 @@ if (env === 'development') {
   console.log('> Excecuting in Production Mode......');
 }
 // view engine setup       //(hbs= halderbals)
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
+configTemplateEngine(app);
 
 app.use(logger('dev')); // es para que nos muestren las peticiones que hacen.
 app.use(express.json()); // comvierte el http a formato json.(es un conversor )
