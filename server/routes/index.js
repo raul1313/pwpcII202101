@@ -3,17 +3,12 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express', autor: 'Gonzalez Mendoza Raul',NameApp: 'WepApp', Company: 'Awsome Software'});
+  res.render('index', { title: 'Express', author: ' Gonzalez Mendoza Raul ', appName: 'WebApp', company: 'Awsome Software' });
 });
 
-/* codigo nuevo. */
-router.get('/greeting', function(req, res, next) {
-res.send('hola campeon como estas?') 
-})
-
-/* codigo profe*/
-router.get('/hola', function(req, res, next){
-res.status(200).json({message: 'Gonzalez Mendoza Raul Jonoel'})
+/* Agregando nuevba ruta*/
+router.get('/greeting', function(req, res, next){
+  res.status(200).json({message: 'Hola campeon de la fullstack web'})
 })
 
 module.exports = router;

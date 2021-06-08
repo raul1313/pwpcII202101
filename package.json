@@ -5,7 +5,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production node ./dist-server/bin/www",
     "w:d": "cross-env NODE_ENV=development babel-watch --watch ./server/views ./server/bin/www",
-    "w:s": "cross-env NODE_ENV=development webpack serve --config ./webpack.dev.config.js --mode development --port 8888",
+    "w:s": "cross-env NODE_ENV=development webpack serve --config ./webpack.dev.config.js --mode development",
     "cleans": "rimraf dist-server",
     "cleanc": "rimraf public/js",
     "b:s": "npm run cleans && babel ./server --out-dir dist-server --copy-files",
@@ -18,12 +18,12 @@
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "express-handlebars": "^5.3.2",
-    "hbs": "^4.1.2",
+    "hbs": "^4.1.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "rimraf": "^3.0.2",
     "webpack": "^5.36.2",
-    "webpack-dev-middleware": "^4.2.0",
+    "webpack-dev-middleware": "^4.3.0",
     "webpack-hot-middleware": "^2.25.0",
     "winston": "^3.3.3"
   },
@@ -37,8 +37,9 @@
     "babel-plugin-module-resolver": "^4.1.0",
     "babel-preset-minify": "^0.5.1",
     "babel-watch": "^7.4.1",
+    "core-js": "^3.12.1",
     "cross-env": "^7.0.3",
-    "css-loader": "^5.2.4",
+    "css-loader": "^5.2.5",
     "eslint": "^7.2.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
@@ -47,6 +48,6 @@
     "eslint-webpack-plugin": "^2.5.4",
     "mini-css-extract-plugin": "^1.6.0",
     "webpack-cli": "^4.6.0",
-    "webpack-dev-server": "^3.7.2"
+    "webpack-dev-server": "^3.11.2"
   }
 }

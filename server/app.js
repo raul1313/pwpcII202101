@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import createError from 'http-errors';
 import express from 'express';
 import path from 'path';
@@ -8,52 +9,45 @@ import winston from 'winston';
 import indexRouter from '@s-routes/index';
 import usersRouter from '@s-routes/users';
 
-// importaremos la configuracion
+// importing configurations
 import configTemplateEngine from '@s-config/template-engine';
 
-// Webpack Modules
-
+// webpack modules
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
-import webpackHotMiddleware from 'webpack-hot-middleware';
+import webpackHotMidddleware from 'webpack-hot-middleware';
 import webpackDevConfig from '../webpack.dev.config';
-
-// Consultar el modo en que se esta ejecutando el programa
-const env = process.env.NODE_ENV || 'development';
-
+// consultar el modo en que se este ejecutando la aplicacion.
+const env = process.env.NODE_ENV || 'developement';
 // se crea la aplicacion express
 const app = express();
-
 // verificando el modo de ejecucion de la aplicacion
 if (env === 'development') {
-  // eslint-disable-next-line no-console
-  console.log('> Excecuting in Development Mode: Webpack Hot Reloading');
-  // Agrega la ruta del HMR
-  // reload=true: Habilita la recarga del frontend cuando hay cambios en el código
-  // 'fuente del fronten
-  // timeout=1000: Tiempo de espera entre recarga y recarga de la pagina.
+  console.log('> Excecuting int Development Mode : Webpack Hot Reloading');
+  // paso 1 agregando la ruta del HMR
+  // reload = true: habilita la recarga del front end cuando hay cambios en el codigo fuente del front end
+  // timeout = mil: tiempo de espera entre recarga y recarga de la paguina
   webpackDevConfig.entry = [
-    'webpack-hot-middleware/client?reload=true&timeout=1000',
+    'webpack-hot-middleware/client?reload=true&timeout=mil',
     webpackDevConfig.entry,
   ];
-  // Agregamos el plugin
+
+  // paso 2 agregamos el plugin
   webpackDevConfig.plugins.push(new webpack.HotModuleReplacementPlugin());
-  // crer el compilador de webpack
+  // paso 3 crear el compilador de webpack
   const compiler = webpack(webpackDevConfig);
-  // agregamos el middleware a la cadena de middlewares
-  // de nuestra aplicacion
+  // paso 4 agregando el middleware ala cadena de middlewares de nuestra aplicacion
   app.use(
     webpackDevMiddleware(compiler, {
       publicPath: webpackDevConfig.output.publicPath,
-    })
+    }),
   );
-
-  // agrega el webpack hot middleware
-  app.use(webpackHotMiddleware(compiler));
+  // paso 5 agregando el webpack hot middleware
+  app.use(webpackHotMidddleware(compiler));
 } else {
-  // eslint-disable-next-line no-console
-  console.log('> Excecuting in Production Mode......');
+  console.log('> Excecuting int Production Mode...');
 }
+
 // view engine setup       //(hbs= halderbals)
 configTemplateEngine(app);
 
@@ -67,12 +61,12 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
-app.use((req, res, next) => {
+app.use( (req, res, next) => {
   next(createError(404));
 });
 
 // error handler
-app.use((err, req, res) => {
+app.use( (err, req, res) => {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
