@@ -1,14 +1,14 @@
-var express = require('express');
-var router = express.Router();
+// importaos el router de home
+import homeRouter from './home';
+// importando router de user
+import userRouter from './user';
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express', author: ' Gonzalez Mendoza Raul ', appName: 'WebApp', company: 'Awsome Software' });
-});
+// Agregando la ruta a la apliccion
+const addRoutes = (app) => {
+  app.use('/', homeRouter);
+  app.use('/user', userRouter);
+};
 
-/* Agregando nuevba ruta*/
-router.get('/greeting', function(req, res, next){
-  res.status(200).json({message: 'Hola campeon de la fullstack web'})
-})
-
-module.exports = router;
+export default {
+  addRoutes,
+};
