@@ -1,17 +1,35 @@
-<!DOCTYPE html>
 <html>
   <head>
     <title>{{appName}}</title>
-     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified CSS -->
+    <link
+      rel='stylesheet'
+      href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css'
+    />
     <!-- Estilos CSS del bundle de Webpack -->
     <link rel='stylesheet' href='/styles/app.css' />
   </head>
   <body>
+    <nav>
+      <div class='container'>
+        <div class='nav-wrapper'>
+          <a href='#' class='brand-logo'>
+          &#128209;ProjNode
+          </a>
+          <ul class='right hide-on-med-and-down'>
+            <li><a href='/'>Inicio </a></li>
+            <li><a href=''>Acerca de... </a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     {{{body}}}
     <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script
+      src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js'
+    ></script>
     <!-- Scripts del bundle de Webpack -->
-    <script src="/js/bundle.js"></script>
+    <script src='/js/bundle.js'></script>
   </body>
 </html>

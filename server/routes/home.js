@@ -1,4 +1,5 @@
 /* eslint-disable prettier/prettier */
+
 // Importando router
 import { Router } from 'express';
 
