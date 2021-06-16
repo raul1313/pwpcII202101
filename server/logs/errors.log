@@ -30,3 +30,8 @@
 {"message":"Code: 404, Message: Page Not Found, URL: /main.62b9321784e9185a9af5.hot-update.json, Method: GET","level":"error","timestamp":"2021-06-11T15:12:53.520Z"}
 {"message":"Code: 404, Message: Page Not Found, URL: /main.9b7d8c937d2aa342981b.hot-update.json, Method: GET","level":"error","timestamp":"2021-06-11T15:21:31.459Z"}
 {"message":"Code: 404, Message: Page Not Found, URL: /main.a4489b6d46f239a6fe12.hot-update.json, Method: GET","level":"error","timestamp":"2021-06-11T15:22:38.438Z"}
+{"message":"Code: 404, Message: Page Not Found, URL: /favicon.ico, Method: GET","level":"error","timestamp":"2021-06-15T00:49:29.170Z"}
+{"message":"Code: 404, Message: Page Not Found, URL: /favicon.ico, Method: GET","level":"error","timestamp":"2021-06-16T01:57:40.517Z"}
+{"message":"Code: 404, Message: Page Not Found, URL: /main.ad2f696eb60a0a33ae63.hot-update.json, Method: GET","level":"error","timestamp":"2021-06-16T02:11:57.176Z"}
+{"message":"Code: 404, Message: Page Not Found, URL: /main.96a540acc2c888470864.hot-update.json, Method: GET","level":"error","timestamp":"2021-06-16T02:12:48.748Z"}
+{"message":"Code: 404, Message: Page Not Found, URL: /main.3e211276bd8d6414253a.hot-update.json, Method: GET","level":"error","timestamp":"2021-06-16T02:14:19.105Z"}

@@ -11,10 +11,13 @@ import homecontroller from '@server/controllers/homecontroller';
 const router = new Router();
 
 // GET
-router.get('/', homecontroller.index);
+router.get(['/', '/index'], homecontroller.index);
 
 // Creando un greting
 router.get('/greeting',homecontroller.greeting);
+// GET about
+
+router.get('/about',homecontroller.about);
 
 // Exportando el router
 export default router;
