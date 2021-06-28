@@ -38,3 +38,6 @@
 {"message":"Code: 404, Message: Page Not Found, URL: /main.241f29fdf85824b8b8cf.hot-update.json, Method: GET","level":"error","timestamp":"2021-06-16T02:24:54.768Z"}
 {"message":"Code: 404, Message: Page Not Found, URL: /favicon.ico, Method: GET","level":"error","timestamp":"2021-06-28T17:55:58.850Z"}
 {"message":"Code: 404, Message: Page Not Found, URL: /main.dfe5c460af1c5a9cc8dd.hot-update.json, Method: GET","level":"error","timestamp":"2021-06-28T18:33:09.104Z"}
+{"message":"Code: 404, Message: Page Not Found, URL: /main.3ada7a4d640b3055b2a3.hot-update.json, Method: GET","level":"error","timestamp":"2021-06-28T18:33:57.177Z"}
+{"message":"Code: 404, Message: Page Not Found, URL: /about.hbs, Method: GET","level":"error","timestamp":"2021-06-28T18:36:23.245Z"}
+{"message":"Code: 404, Message: Page Not Found, URL: /server/views/home/about.hbs, Method: GET","level":"error","timestamp":"2021-06-28T18:37:31.319Z"}
