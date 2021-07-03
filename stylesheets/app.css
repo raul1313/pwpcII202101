@@ -11,3 +11,8 @@ body {
 h1{
     color: rgb(6, 247, 247);
 }
+.imgRedonda {
+  width:300px;
+  height:300px;
+  border-radius:150px;
+}

@@ -19,5 +19,9 @@ router.get('/greeting',homecontroller.greeting);
 
 router.get('/about',homecontroller.about);
 
+// GET CV
+
+router.get('/CV',homecontroller.CV);
+
 // Exportando el router
 export default router;

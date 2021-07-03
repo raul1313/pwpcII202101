@@ -14,9 +14,14 @@ const about = (req, res) => {
   res.render('home/about', {appVersion: '0.0.1'});
   };
 
+  const CV = (req, res) => {
+    res.render('home/CV', {Autor: 'Hernandez Mendoza Viviana Aime'});
+    };
+
   
 export default {
   index,
   greeting,
   about,
+  CV,
 };
