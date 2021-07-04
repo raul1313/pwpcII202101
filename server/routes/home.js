@@ -23,5 +23,8 @@ router.get('/about',homecontroller.about);
 
 router.get('/CV',homecontroller.CV);
 
+// Get Cursos 
+router.get('/Cursos',homecontroller.Cursos);
+
 // Exportando el router
 export default router;

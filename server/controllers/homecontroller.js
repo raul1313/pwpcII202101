@@ -15,13 +15,18 @@ const about = (req, res) => {
   };
 
   const CV = (req, res) => {
-    res.render('home/CV', {Autor: 'Hernandez Mendoza Viviana Aime'});
+    res.render('home/CV', {Autor: 'Hernandez Mendoza Viviana Aime', Carrera: 'TICS'});
+    
     };
 
+    const Cursos = (req, res) => {
+      res.render('home/Cursos', {Referencias: 'Fundacion Carlos Slim', Direccion: 'https://capacitateparaelempleo.org/'});
+      };
   
 export default {
   index,
   greeting,
   about,
   CV,
+  Cursos,
 };
